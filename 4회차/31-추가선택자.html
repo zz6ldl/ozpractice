@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 더 알아보기</title>
+    <style>
+        /*
+        기호와 함께 사용하는 속성 선택자
+        * : 값의 포함 여부
+        ^ : 값의 시작 여부
+        $ : 값의 끝 여부
+        */
+        [width $= "0"]{
+            border: 5px dashed red;
+        }
+
+        p > em{     /*  > : 자식요소(한단계 아래) 선택하기 */
+            color: blue;
+        }
+
+        #sam + p{
+            color: orange;  /* 뒤 이어서 있는 형제만 적용!
+                                 인접 형제 선택자 : + 
+                                 모든 형제 선택자 : ~   */
+        }
+
+    </style>
+</head>
+<body>
+    <img src="images/제주도.jpeg" width="120" alt="제주">
+    <img src="images/제주도.jpeg" width="120">
+    <img src="images/제주도.jpeg" width="120" id="sam">
+    <p>제주도는 대한민국 아래쪽에 위치합니다.</p>
+    <p>제주도는 성산일출봉이 있습니다.</p>
+    <p><em>오름</em>이 많이 있습니다.</p>
+    <p>오름은 걸어갈수도 있고 자전거를 대여할 수 있습니다.</p>
+</body>
+</html>
